@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS public.cliente;
+
+CREATE TABLE IF NOT EXISTS public.cliente (
+	id_cliente BIGINT GENERATED ALWAYS AS IDENTITY,
+	nome VARCHAR(60) NOT NULL,
+	cpf VARCHAR(11) NOT NULL UNIQUE,
+	email VARCHAR(50) NOT NULL,
+	data_nascimento DATE NOT NULL,
+	PRIMARY KEY (id_cliente)
+);
